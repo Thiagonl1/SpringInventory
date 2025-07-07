@@ -1,10 +1,7 @@
 package com.thiago.inventario.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Product {
@@ -16,6 +13,9 @@ public class Product {
     private  String description;
     private String category;
     private double price;
+
+    @ManyToOne
+    @JoinColumn(name = "provider_id")
     private double provider_id;
 
 
