@@ -31,23 +31,23 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    public void increaseStock(Long id, int cantidad) {
+    public void increaseStock(Long id, int amount) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
-        product.setStock(product.getStock() + cantidad);
+        product.setStock(product.getStock() + amount);
         productRepository.save(product);
     }
 
-    public void decreaseStock(Long id, int cantidad) {
+    public void decreaseStock(Long id, int amount) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
-        if (product.getStock() < cantidad) {
+        if (product.getStock() < amount) {
             throw new RuntimeException("Insufficient stock");
         }
 
-        product.setStock(product.getStock() - cantidad);
+        product.setStock(product.getStock() - amount);
         productRepository.save(product);
     }
 
