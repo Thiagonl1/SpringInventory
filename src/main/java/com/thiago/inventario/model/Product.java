@@ -16,7 +16,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "provider_id")
-    private double provider_id;
+    private Provider provider;
 
 
     public long getStock() {
