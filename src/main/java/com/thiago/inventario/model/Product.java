@@ -7,8 +7,8 @@ import jakarta.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private long stock;
+    private Long id;
+    private Long stock;
     private String name;
     private  String description;
     private String category;

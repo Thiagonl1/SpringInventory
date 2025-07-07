@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class InventoryMovement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String type;
     private int quantity;
     private  String date;

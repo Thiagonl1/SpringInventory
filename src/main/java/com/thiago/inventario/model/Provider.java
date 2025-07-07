@@ -11,7 +11,7 @@ public class Provider {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private long id;
+    private Long id;
     private String name;
     private String contact;
     private String email;
